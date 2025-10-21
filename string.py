@@ -41,28 +41,50 @@
 
 # Дано рядок. Визначити порядковий номер першої вказаної букви. Якщо такої літери немає, вивести нуль.
 
-text = input ('Enter text: ')
-letter = input ('Enter latter: ')
+# text = input ('Enter text: ')
+# letter = input ('Enter latter: ')
 
-if letter in text:
-    position = text.index(letter) + 1  
-    print("Serial number of the first letter:", position)
-else:
-    print(0)
+# if letter in text:
+#     position = text.index(letter) + 1  
+#     print("Serial number of the first letter:", position)
+# else:
+#     print(0)
 
 
 
 # Напишіть програму, яка по введеному числу n від 1 до 9 виводить на екран n пінгвінів з відповідним номером - число від 1 до n. Зображення одного пінгвіна має розмір 5 x 9 символів, між двома сусідніми пінгвінами також є порожній (з пропусків) стовпець. Дозволяється вивести порожній стовпець після останнього пінгвіна. Для спрощення малювання скопіюйте пінгвіна із вихідних даних. Врахуйте, що виведення на екран виконується порядково, а не «попінгвінно».
 
+# n = int(input('Enter number (1-9):  '))
+
+# # for i in range(n):
+
+# p1 = "    _~_    " 
+# p2 = "   (o o)   "
+# p3 = "  /  V  \  " 
+# p5 = "   ^^ ^^   " 
+
+# print(p1 * n)
+# print(p2 * n)
+# print(p3 * n)
+
+# nums = "1 2 3 4 5 6 7 8 9"[:2*n - 1]
+# p4 = " ".join([f" /(  {i}  )\\" for i in nums.split()])
+# # p4 = " /(  "+ '' +"  )\\".join(nums.split())
+
+# print(p4)
+# print(p5 * n)
 
 # У рядку є кілька слів, розділених одним або декількома пропусками. Потрібно прибрати з тексту зайві пропуски: два і більше пропусків поспіль, а також всі пропуски на початку і в кінці рядка. На вхід програмі подається рядок, що складається не більше ніж з 255 символів. Надрукувати новий рядок.
-# Вхідні дані:
-#    Beyond the green     swelling hills of the     Mittel Land rose mighty slopes of forest    up    to the lofty steeps of the Carpathians    themselves
-# Вихідні дані:
-# Beyond the green swelling hills of the Mittel Land rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves
 
+# text = "    Beyond the green     swelling hills of the     Mittel Land rose mighty slopes of forest    up    to the lofty steeps of the Carpathians    themselves"
+
+# clean = " ".join(text.split())
+# print(clean)
 
 # Дано рядок, що складається з n цифр (тобто одноцифрових чисел), між якими стоїть n-1 знаків операцій, кожна з яких може бути або +, або -. Обчисліть значення цього виразу. Програма має надрукувати результат обчислення цього виразу.
+
+r = '5-3+1'
+
 # Вхідні дані:
 # 5-3+1
 # 6+3-2
