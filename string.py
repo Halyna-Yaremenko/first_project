@@ -180,16 +180,16 @@
 
 # 11. Напишіть програму, яка визначає, чи є у введеному рядку десяткові цифри, і виводить найбільше число, яке можна скласти з цих цифр. Провідних нулів у числі бути не повинно (за винятком числа 0, запис якого містить рівно одну цифру). Гарантовано, що у рядку є принаймні одна цифра. Вхідний рядок містить довільні символи. Програма повинна вивести найбільше число, яке можна скласти з присутніх в рядку десяткових цифр.
 
-ex = input("Enter ex:\n")
+# ex = input("Enter ex:\n")
 
-res = []
+# res = []
 
-for i in ex:
-    if i.isdigit():   
-        res.append(i) 
+# for i in ex:
+#     if i.isdigit():   
+#         res.append(i) 
 
-res.sort(reverse=True)
+# res.sort(reverse=True)
 
-largest_number = ''.join(res)
+# largest_number = ''.join(res)
 
-print (largest_number)
+# print (largest_number)
