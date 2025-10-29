@@ -67,10 +67,15 @@
 # def teg_html (teg, text):
 #     return f"<{teg}>{text}</{teg}>"
 
-# text = input("Enter text: ")
-# teg = input("Enter teg: ")
 
-# print(teg_html(teg,text))
+# text = input("Enter text: ")
+
+# # teg, string = text.split()
+
+# teg = text.split()[0]
+# string = " ".join(text.split()[1:])
+
+# print(teg_html(teg, string))
 
 #------------------------------------------------------------------------------------------
 
@@ -115,7 +120,39 @@
 
 # 9. Напишіть функцію для визначення, чи рік високосний чи ні.
 
+# /4
+# yf 100 b 400
+# //100 а не ділиться на 400
+# який признак високосного року
+
 # 10. Напишіть функцію, яка отримує значення середньомісячної кількості опадів по місяцях (в мм) і повертає загальний обсяг опадів протягом року, середньорічну кількість опадів, назви місяців та значення з найвищим та найменшим числом опадів протягом року.
+
+def rainfall_statistics(values):
+    
+    months = [
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ]
+    
+    rain = list(map(float, values.split()))
+
+    total = sum(rain)
+
+    average = total / len(rain)
+
+    max_rain = max(rain)
+    min_rain = min(rain)
+
+    max_month = months[rain.index(max_rain)]
+    min_month = months[rain.index(min_rain)]
+
+    return (total, average, (max_rain, max_month), (min_rain, min_month))
+
+
+data = "22 22 24 49 72 98 101 82 51 40 36 24"
+
+result = rainfall_statistics(data)
+
+print(result)
 
 # Вхідні дані:
 
