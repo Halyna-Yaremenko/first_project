@@ -119,47 +119,57 @@
 # Middle level
 
 # 9. Напишіть функцію для визначення, чи рік високосний чи ні.
+# Рік є високосним, якщо виконується одна з умов:
+# Ділиться на 400
+# Ділиться на 4, але не ділиться на 100
 
-# /4
-# yf 100 b 400
-# //100 а не ділиться на 400
-# який признак високосного року
+
+# def leap_year(year):
+
+#     if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+#         return True
+#     else:
+#         return False
+
+# year = int(input("Enter year: "))
+
+# if leap_year(year):
+#     print("Високосний рік")
+# else:
+#     print("Невисокосний рік")
+
+#------------------------------------------------------------------------------------------
 
 # 10. Напишіть функцію, яка отримує значення середньомісячної кількості опадів по місяцях (в мм) і повертає загальний обсяг опадів протягом року, середньорічну кількість опадів, назви місяців та значення з найвищим та найменшим числом опадів протягом року.
 
-def rainfall_statistics(values):
+# def rainfall_statistics(values):
     
-    months = [
-        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-        ]
+#     months = [
+#         "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+#         ]
     
-    rain = list(map(float, values.split()))
+#     rain = list(map(float, values.split()))
 
-    total = sum(rain)
+#     total = sum(rain)
 
-    average = total / len(rain)
+#     average = total / len(rain)
 
-    max_rain = max(rain)
-    min_rain = min(rain)
+#     max_rain = max(rain)
+#     min_rain = min(rain)
 
-    max_month = months[rain.index(max_rain)]
-    min_month = months[rain.index(min_rain)]
+#     max_month = months[rain.index(max_rain)]
+#     min_month = months[rain.index(min_rain)]
 
-    return (total, average, (max_rain, max_month), (min_rain, min_month))
+#     return (total, average, (max_rain, max_month), (min_rain, min_month))
 
 
-data = "22 22 24 49 72 98 101 82 51 40 36 24"
+# data = "22 22 24 49 72 98 101 82 51 40 36 24"
 
-result = rainfall_statistics(data)
+# result = rainfall_statistics(data)
 
-print(result)
+# print(result)
 
-# Вхідні дані:
-
-# 22 22 24 49 72 98 101 82 51 40 36 24
-# Вихідні дані:
-
-# (621.0, 51.75, (101.0, 'July'), (22.0, 'January'))
+#------------------------------------------------------------------------------------------
 
 # 11. На стадіоні є три категорії місць для сидіння: місця класу A коштують a грошових одиниць, місця класу B коштують b грошових одиниць, а місця класу C - c грошових одиниць. Напишіть першу функцію, яка запитує скільки продано квитків на кожний клас місць, і другу функцію, яка відображає суму отриманого доходу від продажу квитків на кожен клас окремо і загалом. Формати введення і виведення такі, як у вхідних і вихідних даних.
 
@@ -178,9 +188,14 @@ print(result)
 
 # ({'A': 922.5, 'B': 472.5, 'C': 158.25}, 1553.25)
 
+#------------------------------------------------------------------------------------------
 
 # 12. Напишіть функцію, яка перевіряє, чи рядок є паліндром чи ні. Регістр літер, пропуски і знаки пунктуації не враховувати.
 # Паліндром - це слово, фраза або послідовність, яка читається так само як зліва направо, так і справа наліво.
+
+
+#------------------------------------------------------------------------------------------
+
 
 # Hard level
 
