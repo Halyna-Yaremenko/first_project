@@ -190,9 +190,10 @@
 
 # 12. Напишіть програму для обчислення добутку цілих чисел (без використання циклу for), які вводяться через пропуск користувачем в одному рядку.
 
-numbers = input("Enter numbers: ")
+# numbers = "2 5 3"
+# numbers_list = list(map(int, numbers.split()))
 
-
+#while
 
 
 # Вхідні дані:
@@ -253,9 +254,22 @@ numbers = input("Enter numbers: ")
 
 # 17. Користувач вводить два цілих додатних числа n і m. Напишіть програму, яка створює двовимірний масив розміром n x m і заповнює його символами . і * у шаховому порядку (як у вихідних даних). Лівий верхній кут повинен мати символ ..
 
-# Вхідні дані:
+# n = int(input("Enter n: "))
+# m = int(input("Enter m: "))
 
-# 6 8
+# for row in range(n):
+#     for col in range(m):
+#         if (row + col) % 2 == 0:
+#            print(".", end=" ")
+#         else:
+#             print("*", end=" ")
+    
+#     print()
+
+
+# Вхідні дані:
+# 6 8 
+
 # Вихідні дані:
 
 # . * . * . * . *
@@ -318,3 +332,26 @@ numbers = input("Enter numbers: ")
 # Вихідні дані:
 
 # I.....I...
+
+n = int(input("Enter n: "))
+m = int(input("Enter m: "))
+
+result = []
+
+for row in range(n):
+    
+    el_list = []
+    
+    for col in range(m):
+        
+        if (row + col) % 2 == 0:
+          el_list.append(".")
+        else:
+            el_list.append("*")
+
+    result.append(el_list)
+
+    
+print(result)
+
+# lis[2][7] звернення до елементу масива
