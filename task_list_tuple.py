@@ -190,10 +190,15 @@
 
 # 12. Напишіть програму для обчислення добутку цілих чисел (без використання циклу for), які вводяться через пропуск користувачем в одному рядку.
 
-# numbers = "2 5 3"
+# numbers = "5 5 3"
 # numbers_list = list(map(int, numbers.split()))
 
-#while
+# res = 1
+
+# while numbers_list:
+#     res *= numbers_list.pop()   # множимо на останній елемент і видаляємо його зі списку
+
+# print(res)   
 
 
 # Вхідні дані:
@@ -205,37 +210,61 @@
 
 # 13. Напишіть програму для друку елементів певного цілочисельного списку після видалення з нього парних чисел. Значення списку вводяться через пропуск в одному рядку.
 
-# Вхідні дані:
+# numbers = "3 44 6 8 9 12 7"
+# numbers_list = list(map(int, numbers.split()))
 
-# 3 44 6 8 9 12 7
-# Вихідні дані:
+# res_list = []
 
-# [3, 9, 7]
+# # for i in numbers_list:
+# #     if i % 2 != 0:
+# #         res_list.append(i)
+
+# res_list = [i for i in numbers_list if i % 2 != 0]
+    
+# print(res_list)
+
+
+# Вхідні дані: 3 44 6 8 9 12 7
+# Вихідні дані: [3, 9, 7]
 
 
 # 14. Напишіть програму, яка приймає послідовність 4-цифрових двійкових чисел, розділених комами, і друкує числа, які ділиться на 5 без остачі, в рядку і розділені комами.
 
-# Вхідні дані:
+# numbers = "0100,0011,1010,1001,1100"
+# numbers_list = numbers.split(",")
 
-# 0100,0011,1010,1001,1100
-# Вихідні дані:
+# res_list = []
 
-# 1010
+# for i in numbers_list:
+  
+
+#    if i % 5 == 0:
+#       res_list.append(i)
+
+# print (res_list)
+
+# Вхідні дані: 0100,0011,1010,1001,1100
+# Вихідні дані: 1010
 
 
 # 15. Ви вирішили написати перетворювач коду на Python в код на Java. Так як на Java прийнятий стандарт найменування CamelCase, то ви вирішили навчитися перетворювати імена з underscore в цей формат. Стиль underscore характеризується тим, що слова в імені пишуться маленькими літерами і розділяються між собою символом підкреслення _. Стиль CamelCase означає, що кожне слово пишеться з великої літери і роздільників між словами немає. Отже, вводиться один рядок, що містить ім’я, записане в форматі underscore. Програма виводить рядок, що містить ім’я в форматі CamelCase.
 
-# Вхідні дані:
+# text_underscore = "my_class"
+# text_CamelCase = text_underscore.title()
 
-# my_class
-# c
-# Вихідні дані:
+# print("".join(text_CamelCase.split("_")))
 
-# MyClass
-# C
-
+# Вхідні дані: my_class
+# Вихідні дані: MyClass
 
 # 16. Напишіть програму для видалення кожного третього елемента із цілочисельного списку і друку результуючого списку, доки список не стане порожнім. Початковий список цілих чисел вводиться в одному рядку через пропуск.
+
+numbers = "2 5 8 9 4 78 7 1"
+numbers_list = list(map(int, numbers.split()))
+
+while numbers_list:
+    numbers_list.pop(2)
+    print(numbers_list)
 
 # Вхідні дані:
 
@@ -333,25 +362,25 @@
 
 # I.....I...
 
-n = int(input("Enter n: "))
-m = int(input("Enter m: "))
+# n = int(input("Enter n: "))
+# m = int(input("Enter m: "))
 
-result = []
+# result = []
 
-for row in range(n):
+# for row in range(n):
     
-    el_list = []
+#     el_list = []
     
-    for col in range(m):
+#     for col in range(m):
         
-        if (row + col) % 2 == 0:
-          el_list.append(".")
-        else:
-            el_list.append("*")
+#         if (row + col) % 2 == 0:
+#           el_list.append(".")
+#         else:
+#             el_list.append("*")
 
-    result.append(el_list)
+#     result.append(el_list)
 
     
-print(result)
+# print(result)
 
-# lis[2][7] звернення до елементу масива
+# # lis[2][7] звернення до елементу масива
