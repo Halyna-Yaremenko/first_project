@@ -200,6 +200,15 @@
 
 # print(res)   
 
+# ------
+# n = 0
+# res = 1
+
+# while n > len(numbers):
+#    res *=numbers[n]
+#    n += 1
+# print(res)
+
 
 # Вхідні дані:
 # 2 5 3
@@ -232,16 +241,26 @@
 
 # numbers = "0100,0011,1010,1001,1100"
 # numbers_list = numbers.split(",")
+# # print(numbers_list)
+
 
 # res_list = []
 
 # for i in numbers_list:
+
+#     st = 0
+#     dec = 0
   
+#     for digit in i[::-1]:
+       
+#         st += 1
+#         dec += int(digit) * (2  ** st)
+       
+#     if dec % 5 == 0:
+#         res_list.append(i)
 
-#    if i % 5 == 0:
-#       res_list.append(i)
+# print(res_list)
 
-# print (res_list)
 
 # Вхідні дані: 0100,0011,1010,1001,1100
 # Вихідні дані: 1010
@@ -259,16 +278,19 @@
 
 # 16. Напишіть програму для видалення кожного третього елемента із цілочисельного списку і друку результуючого списку, доки список не стане порожнім. Початковий список цілих чисел вводиться в одному рядку через пропуск.
 
-numbers = "2 5 8 9 4 78 7 1"
-numbers_list = list(map(int, numbers.split()))
+# numbers = "2 5 8 9 4 78 7 1"
+# numbers_list = list(map(int, numbers.split()))
 
-while numbers_list:
-    numbers_list.pop(2)
-    print(numbers_list)
+# index = 2
 
-# Вхідні дані:
+# while numbers_list:
+#     index = 2
+#     index %= len(numbers_list)
+#     # index2 = index % len(numbers_list)
+#     numbers_list.pop(index)
+#     print(numbers_list)
 
-# 2 5 8 9 4 78 7 1
+# Вхідні дані:# 2 5 8 9 4 78 7 1
 # Вихідні дані:
 
 # [2, 5, 9, 4, 78, 7, 1]
