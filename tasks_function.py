@@ -173,6 +173,37 @@
 
 # 11. На стадіоні є три категорії місць для сидіння: місця класу A коштують a грошових одиниць, місця класу B коштують b грошових одиниць, а місця класу C - c грошових одиниць. Напишіть першу функцію, яка запитує скільки продано квитків на кожний клас місць, і другу функцію, яка відображає суму отриманого доходу від продажу квитків на кожен клас окремо і загалом. Формати введення і виведення такі, як у вхідних і вихідних даних.
 
+
+def get_ticket_data():
+    tickets = {}
+    for _ in range(3): # "_" це символ який можна використовувати замість змінної циклу, коли цикл лише для кількості повторювань, без підстановки значень змінної "i"
+        category = input("category: ").strip()  # sprip прибирає пробіли на початку і у кінці
+        price = float(input("price: ").strip())
+        sold = int(input("sold: ").strip())
+        tickets[category] = (price, sold)
+    
+    return tickets
+
+# print(get_ticket_data())
+
+def calculate_revenue(tickets):
+    tickets_by_class = {}
+    total = 0
+    # category, (price, sold) = ('f': (5.0, 6))
+    # category = 'f', price = 5.0, sold = 6
+    for category, (price, sold) in tickets.items():
+        revenue = price * sold
+        tickets_by_class[category] = revenue
+        total += revenue
+
+    return tickets_by_class, total
+
+print(calculate_revenue(get_ticket_data()))
+
+# data = get_ticket_data()
+# res = calculate_revenue(data)
+# print(res)
+
 # Вхідні дані:
 
 # A
